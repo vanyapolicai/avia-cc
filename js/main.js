@@ -1,0 +1,25 @@
+$(function(){
+    $('.menu__burger').on('click',function(){
+        $('.menu__burger').toggleClass('menu__open');
+        $('.menu__list').toggleClass('menu__open');
+    });
+    $('.form__button--booking').on('click',function(){
+        $('.form__button--booking').addClass('form__booking--active');
+        $('.form__button--ship').removeClass('form__ship--active');
+        $('.span__booking').addClass('span__booking--active');
+        $('.span__ship').removeClass('span__ship--active');
+        $('.booking__svg').addClass('booking__svg--active');
+        $('.ship__svg').removeClass('ship__svg--active');
+    });
+    $('.form__button--ship').on('click',function(){
+        $('.form__button--ship').addClass('form__ship--active');
+        $('.form__button--booking').removeClass('form__booking--active');
+        $('.span__booking').removeClass('span__booking--active');
+        $('.span__ship').addClass('span__ship--active');
+        $('.booking__svg').removeClass('booking__svg--active');
+        $('.ship__svg').addClass('ship__svg--active');
+    });
+    $('.header__num').on('click',function(){
+        $('.number-list').toggleClass('number-list--active');
+    });
+});

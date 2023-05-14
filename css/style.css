@@ -1,0 +1,604 @@
+@font-face {
+  font-family: 'Mont-300';
+  src: url('../fonts/mont_extralightdemo-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont-300';
+  src: url('../fonts/mont_extralightdemo-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont-800';
+  src: url('../fonts/mont_heavydemo-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mont-800';
+  src: url('../fonts/mont_heavydemo-webfont.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  padding: 20px 80px;
+  background-color: #fff;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.logo {
+  border-right: 1px #1d2362 solid;
+  padding-right: 8px;
+}
+
+.logo-link {
+  display: block;
+  display: flex;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.header__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header__subtitle {
+  align-self: flex-end;
+}
+
+.header__left {
+  display: flex;
+  gap: 10px;
+}
+
+.header__title {
+  font-family: "Mont-800";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1d2362;
+}
+
+.header__subtitle {
+  font-family: "Mont-300";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 14px;
+  color: #91989c;
+}
+
+.header__right {
+  display: flex;
+  gap: 35px;
+}
+
+.header__num-wrapper {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.header__num-icon {
+  padding-top: 23px;
+}
+
+.header__num {
+  font-family: "Mont-800";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #232527;
+  padding-top: 20px;
+  padding-right: 5px;
+  position: relative;
+}
+.number-list{
+  display: none;
+}
+.number-list.number-list--active{
+  display: block;
+}
+.header__num ul {
+  position: absolute;
+  left: 0;
+  width: 160px;
+  background-color: #fff;
+}
+
+.number-item:hover {
+  background-color: #F3F8FC;
+}
+
+.number-subtitle {
+  font-size: 8px;
+  color: #6C727F;
+}
+
+.header__button {
+  display: block;
+  border: none;
+  background: #1fb6eb;
+  border-radius: 12px;
+  padding: 16px 28px;
+  font-family: "Mont-800";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 80px;
+  background-color: #2b323a;
+}
+
+.menu__link {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.form-bg {
+  width: 1200px;
+}
+
+.content__form {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  width: 455px;
+  background: #f3f8fc;
+  border-radius: 12px;
+  position: relative;
+  z-index: 999;
+  position: absolute;
+  margin-left: 80px;
+  top: 150px;
+}
+
+.form__top {
+  display: flex;
+  gap: 0px;
+}
+
+.form__button {
+  border: none;
+  background-color: #2b323a;
+  font-family: "Mont-800";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  width: 50%;
+  margin-bottom: 40px;
+  cursor: pointer;
+  position: relative;
+}
+
+.form__svg {
+  position: absolute;
+  top: 39px;
+}
+
+.booking__svg {
+  left: 105px;
+  display: none;
+}
+
+.ship__svg {
+  right: 105px;
+  display: none;
+}
+
+.booking__svg.booking__svg--active {
+  display: block;
+}
+
+.ship__svg.ship__svg--active {
+  display: block;
+}
+
+.form__button--booking {
+  border-radius: 12px 0px 0px 0px;
+  background-color: #1fb6eb;
+}
+
+
+.form__button--ship {
+  border-radius: 0px 12px 0px 0px;
+}
+
+.form__where,
+.form__date {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.form__where--from,
+.form__where--to,
+.form__date--form,
+.form__date--to {
+  width: 177px;
+  height: 46px;
+  background: #ffffff;
+  border: 1px solid #d2d5da;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.form__email,
+.form__tel {
+  width: 378px;
+  height: 46px;
+  background: #ffffff;
+  border: 0.993088px solid #d2d5da;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.form__where,
+.form__date,
+.form__email {
+  margin-bottom: 23px;
+}
+
+.form__tel {
+  margin-bottom: 33px;
+}
+
+.form__where--from,
+.form__where--to,
+.form__date--form,
+.form__date--to,
+.form__email,
+.form__tel {
+  padding-left: 15px;
+}
+
+.mini {
+  font-family: "Monte-800";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  color: #121826;
+  position: absolute;
+}
+
+.whence {
+  top: -6px;
+  left: 50px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.whence-span {
+  color: red;
+}
+
+.where {
+  top: -6px;
+  left: 248px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.where-span {
+  color: red;
+}
+
+.departure {
+  top: -6px;
+  left: 50px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.departure-span {
+  color: red;
+}
+
+.return {
+  top: -6px;
+  left: 248px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.name {
+  bottom: 214px;
+  left: 50px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.name-span {
+  color: red;
+}
+
+.calendar-icon {
+  width: 19px;
+  height: 19px;
+  position: absolute;
+}
+
+.calendar-icon__where--from,
+.calendar-icon__departure {
+  top: 13px;
+  left: 180px;
+}
+
+.calendar-icon__where--to,
+.calendar-icon__return {
+  top: 13px;
+  right: 58px;
+}
+
+.calendar-icon__name {
+  bottom: 190px;
+  right: 58px;
+}
+
+.number {
+  bottom: 146px;
+  left: 50px;
+  padding: 0 5px;
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+.phone-icon {
+  position: absolute;
+  bottom: 123px;
+  right: 58px;
+}
+
+.form__submit {
+  display: block;
+  border: none;
+  padding: 9px 85px;
+  background-color: #1FB6EB;
+  border-radius: 8px;
+  font-family: 'Mont-800';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.menu__list.menu__open {
+  top: 60px;
+}
+
+.menu__burger.menu__open {
+  margin-top: 5px;
+}
+
+.menu__burger.menu__open span {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu__burger.menu__open:before {
+  transform: rotate(38deg);
+  top: 16px;
+  transition: 0.4s;
+}
+
+.menu__burger.menu__open:after {
+  transform: rotate(-38deg);
+  bottom: 16px;
+  transition: 0.4s;
+}
+
+.span__booking,
+.span__ship {
+  display: none;
+}
+
+.span__booking.span__booking--active {
+  display: block;
+}
+
+.span__ship.span__ship--active {
+  display: block;
+}
+
+.content__text {
+  width: 423px;
+  height: 135px;
+  background: #F3F8FC;
+  border-radius: 15px;
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 30px;
+  color: #2D3237;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
+  text-align: center;
+}
+
+.group {
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 57px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2D3237;
+}
+
+.cargo {
+  font-family: 'Mont';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 55px;
+  line-height: 57px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2D3237;
+}
+
+
+@media(max-width: 640px) {
+  .header {
+    padding: 5px 80px;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .header__num {
+    display: none;
+  }
+
+  .header__title {
+    font-size: 14px;
+  }
+
+  .header__subtitle {
+    font-size: 8px;
+  }
+
+  .header__num-icon {
+    display: none;
+  }
+
+  .header__button {
+    text-indent: -9999em;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  .header__button::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/phone.svg);
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+    top: 16px;
+    left: 17px;
+  }
+
+  .menu__burger {
+    position: relative;
+    /* задаем относительное позиционирование */
+    width: 40px;
+    /* определяем размеры блока */
+    height: 35px;
+    display: block;
+    margin-left: 10px;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: -100%;
+    transition: all .4s ease;
+  }
+
+  .menu__burger span,
+  .menu__burger:after,
+  .menu__burger:before {
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: black;
+    margin: 0 auto;
+  }
+
+  .menu__burger span {
+    top: 21px;
+  }
+
+  .menu__burger:after,
+  .menu__burger:before {
+    content: '';
+  }
+
+  .menu__burger:after {
+    bottom: 3px;
+  }
+
+  .menu__burger:before {
+    top: 13px;
+  }
+}
